@@ -18,11 +18,16 @@ The present coding sprint aims at gathering data-scientists who specialize in hi
 Our specific goal is to integrate the classic continuous signal processing techniques and the main machine learning techniques within a common framework following [Scikit-Learn](http://scikit-learn.org)'s API such that user can for example do
 
 ```python
-make_pipeline(
+estimator = make_pipeline(
     TimeFrequencyTransform(frequencies=range(1, 100)),
     GrangerCausality(),
     SVM(kernel='rbf')
 )
+
+estimator.transform(X, y)  # transform time series.
+estimator.fit(X, y)  # transform & fit time series with machine learning algorithm.
+estimator.predict(X, y)  # predict the class of each time series.
+estimator.apply(X)  # transform time series to only keep relevant features.
 ```
 
 We are currently biased towards neural time series (EEG, MEG, ECoG, multi-unit neural recordings etc), but would like to bridge towards other communities which deal with signals with similar underlying structures (music, speech, radar etc).
@@ -39,6 +44,13 @@ The current list of confirmed developpers are all core-developper of [MNE](mne-t
 - [Jas Mainak](https://perso.telecom-paristech.fr/mjas/) is a grad student at Telecom Paris-Tech and currently specializes in denoising MEG signals.
 - [Jona Sassenhagen](https://github.com/jona-sassenhagen) is a Postdoc at Uni. of Frankfurt and currently specializes in continuous encoding models.
 
-### Support or Contact
+## Specific Goals
+- [ ] Support regularized regression for decoding and encoding of continuous Signals.
+- [ ] Revamp temporal generalization analyses.
+- [ ] Allow extraction of spatial filters and spatial patterns.
+- [ ] Allow `apply` method for denoising.
+- [ ] Allow `get_filters` & `get_patterns` method to extract coefficient of linear models
+
+## Support or Contact
 
 Anyone interested in joining is welcome to join us. You can contact jeanremi.king [at] gmail [dot] com for specific information.
