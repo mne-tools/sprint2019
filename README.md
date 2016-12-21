@@ -1,37 +1,44 @@
-## Welcome to GitHub Pages
+# Coding Sprint: Supervised Time Series
 
-You can use the [editor on GitHub](https://github.com/kingjr/supervised_time_series/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## When & Where
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+27th - 31st of March, at New York University.
 
-### Markdown
+Room: To-be-announced.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+![alt text](map.png "NYU Map")
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+## What & Why
 
-- Bulleted
-- List
+By providing new techniques and new ways of looking at complex datasets, machine learning is currently revolutionizing many scientific fields.
 
-1. Numbered
-2. List
+The present coding sprint aims at gathering data-scientists who specialize in high dimensional time series.
 
-**Bold** and _Italic_ and `Code` text
+Our specific goal is to integrate the classic continuous signal processing techniques and the main machine learning techniques within a common framework following [Scikit-Learn](http://scikit-learn.org)'s API such that user can for example do
 
-[Link](url) and ![Image](src)
+```python
+make_pipeline(
+    TimeFrequencyTransform(frequencies=range(1, 100)),
+    GrangerCausality(),
+    SVM(kernel='rbf')
+)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+We are currently biased towards neural time series (EEG, MEG, ECoG, multi-unit neural recordings etc), but would like to bridge towards other communities which deal with signals with similar underlying structures (music, speech, radar etc).
 
-### Jekyll Themes
+## Who
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kingjr/supervised_time_series/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+The current list of confirmed developpers are all core-developper of [MNE](mne-tools.github.io):
+- [Alexandre Barachant](http://alexandre.barachant.org) is a multi-winner of [Kaggle competitions](https://www.kaggle.com/alexandrebarachant) and currently specializes in decoding MEG and EEG signals using Riemannian Geometry.
+- [Denis Engemann](http://www.denis-engemann.de), is an assistant Prof at INRIA and currently specializes in large-scale analyses of EEG and MEG databases.
+- [Alexandre Gramfort](alexandre.gramfort.net) is a prof at Telecom Paris-Tech, [Scikit-Learn](http://scikit-learn.org) and currently specializes in inverse modeling.
+- [Chris Holdgraf](http://predictablynoisy.com/) is a grad student at Berkley and currently specializes in continuous encoding models.
+- [Jean-Rémi King](https://sites.google.com/site/jeanremiking/) is a postdoc at NYU & FIAS and currently specializes in decoding M/EEG & ECoG signals.
+- [Eric Larson](http://staff.washington.edu/larsoner/) is a research scientist at UW, [Scipy](https://www.scipy.org/) and currently specializes in signal denoising.
+- [Jas Mainak](https://perso.telecom-paristech.fr/mjas/) is a grad student at Telecom Paris-Tech and currently specializes in denoising MEG signals.
+- [Jona Sassenhagen](https://github.com/jona-sassenhagen) is a Postdoc at Uni. of Frankfurt and currently specializes in continuous encoding models.
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Anyone interested in joining is welcome to join us. You can contact jeanremi.king [at] gmail [dot] com for specific information.
