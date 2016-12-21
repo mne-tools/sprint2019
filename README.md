@@ -7,23 +7,35 @@
 
 Room: To-be-announced.
 
-![alt text](map.png "NYU Map")
+![alt text](map.png "NYU Map")(https://www.google.fr/maps/place/New+York+University/@40.7295134,-73.9986549,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2599af55395c1:0xda30743171b5f305!8m2!3d40.7295134!4d-73.9964609?hl=en)
 
 
 ## What & Why
 
-By providing new techniques and new ways of looking at complex datasets, machine learning is currently revolutionizing many scientific fields.
+By providing new techniques and new ways of looking at complex datasets, Machine Learning (ML) is currently revolutionizing many scientific fields.
 
-The present coding sprint aims at gathering data-scientists who specialize in high dimensional time series.
+The present coding sprint aims at gathering expert data-scientists, who specialize in high dimensional time series.
 
-Our specific goal is to integrate the classic continuous signal processing techniques and the main machine learning techniques within a common framework following [Scikit-Learn](http://scikit-learn.org)'s API such that user can for example do
+Our specific goal is to integrate i) the classic continuous signal processing techniques and ii) the main machine learning techniques within a common Python package, whose' API follows [Scikit-Learn](http://scikit-learn.org)'s.
+
+At the end of the coding sprint, user should be able to can for example build simple pipeline to transform, fit, predict and score their data & analyses of choice:
 
 ```python
 estimator = make_pipeline(
     TimeFrequencyTransform(frequencies=range(1, 100)),
     GrangerCausality(),
-    SVM(kernel='rbf')
+    SearchLight(SVM(kernel='rbf'), axis='time'),
 )
+
+# or
+
+estimator = make_pipeline(
+    CSP(n_components=10),
+    InverseOperator(info),
+    SearchLight(Ridge(), axis='space'),
+)
+
+# such that we can do
 
 estimator.transform(X, y)  # transform time series.
 estimator.fit(X, y)  # transform & fit time series with machine learning algorithm.
@@ -31,11 +43,11 @@ estimator.predict(X, y)  # predict the class of each time series.
 estimator.apply(X)  # transform time series to only keep relevant features.
 ```
 
-We are currently biased towards neural time series (EEG, MEG, ECoG, multi-unit neural recordings etc), but would like to bridge towards other communities which deal with signals with similar underlying structures (music, speech, radar etc).
+The current group of developers is currently biased towards *neural* time series (EEG, MEG, ECoG, multi-unit neural recordings etc). However, we would particularly like to bridge this community to other fields that encounter similarly structured signals (music, speech, radar etc).
 
 ## Who
 
-The current list of confirmed on-site developpers are all core-contributors of [MNE](mne-tools.github.io):
+The current list of confirmed on-site developers are all core-contributors of [MNE](mne-tools.github.io):
 
 - [Alexandre Barachant](http://alexandre.barachant.org) is a multi-winner of [Kaggle competitions](https://www.kaggle.com/alexandrebarachant) and currently specializes in decoding MEG and EEG signals using Riemannian Geometry.
 
@@ -69,13 +81,11 @@ The current list of confirmed on-site developpers are all core-contributors of [
 
 - [ ] WIP: add oversampling & data enhancement. [easy]
 
-- [ ] ENH: intersubject decoding / hyperalignment. [v. hard]
-
+- [ ] ENH: inter-subject decoding / hyper-alignment. [v. hard]
 
 - [ ] FIX: Revamp temporal generalization analyses. [hard]
 
 - [ ] FIX: XDawn decoding/preprocessing. [easy]
-
 
 - [ ] DOC: simplify decoding gallery/examples & tutorials. [easy]
 
