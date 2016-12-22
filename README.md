@@ -61,7 +61,7 @@ The current list of confirmed on-site developers are all core-contributors of [M
 
 - [Eric Larson](http://staff.washington.edu/larsoner/) is a research scientist at University of Washington, [Scipy](https://www.scipy.org/) working MEG data processing.
 
-- [Mainak Jas](https://perso.telecom-paristech.fr/mjas/) is a grad student at Telecom Paris-Tech Université Paris-Saclay and currently specializes in denoising and modeling MEG signals.
+- [Mainak Jas](https://perso.telecom-paristech.fr/mjas/) is a grad student at Telecom ParisTech Université Paris-Saclay and currently specializes in denoising and modeling MEG signals.
 
 - [Jona Sassenhagen](https://github.com/jona-sassenhagen) is a Postdoc at Uni. of Frankfurt and currently specializes in continuous encoding models.
 
