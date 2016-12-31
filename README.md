@@ -7,7 +7,7 @@
 
 Room: To-be-announced.
 
-![alt text](map.png "NYU Map")(https://www.google.fr/maps/place/New+York+University/@40.7295134,-73.9986549,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2599af55395c1:0xda30743171b5f305!8m2!3d40.7295134!4d-73.9964609?hl=en)
+[![alt text](map.png "NYU Map")](https://www.google.fr/maps/place/New+York+University/@40.7295134,-73.9986549,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2599af55395c1:0xda30743171b5f305!8m2!3d40.7295134!4d-73.9964609?hl=en)
 
 
 ## What & Why
@@ -16,9 +16,9 @@ By providing new techniques and new ways of looking at complex datasets, Machine
 
 The present coding sprint aims at gathering expert data-scientists, who specialize in high dimensional time series.
 
-Our specific goal is to integrate i) the classic continuous signal processing techniques and ii) the main machine learning techniques within a common Python package, whose' API follows [Scikit-Learn](http://scikit-learn.org)'s.
+Our specific goal is to integrate i) the classic continuous signal processing techniques and ii) the main machine learning techniques within a common Python package, whose API follows [Scikit-Learn](http://scikit-learn.org)'s.
 
-At the end of the coding sprint, user should be able to can for example build simple pipeline to transform, fit, predict and score their data & analyses of choice:
+At the end of the coding sprint, user should be able to can for example build simple pipeline to `transform`, `fit`, `predict` and `score` their data & analyses of choice:
 
 ```python
 estimator = make_pipeline(
