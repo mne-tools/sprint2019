@@ -65,6 +65,8 @@ The current list of confirmed on-site developers are all core-contributors of [M
 
 - [Jona Sassenhagen](https://github.com/jona-sassenhagen) is a Postdoc at Uni. of Frankfurt and currently specializes in continuous encoding models.
 
+- [Teon Brooks](http://teonbrooks.github.io) is a [Mozilla Science Fellow](https://science.mozilla.org/programs/fellowships/) and a postdoc at Stanford University and currently specializes in decoding M/EEG signals and eye movement behavior.
+
 ## Specific Goals
 
 - [ ] ENH: Support regularized regression for decoding and encoding of continuous Signals. [hard]
