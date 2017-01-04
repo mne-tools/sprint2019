@@ -2,8 +2,7 @@
 
 ## When & Where
 
-27th
-- 31st of March, at New York University.
+March 27th - 31st, at New York University.
 
 Room: To-be-announced.
 
@@ -51,9 +50,9 @@ The current list of confirmed on-site developers are all core-contributors of [M
 
 - [Alexandre Barachant](http://alexandre.barachant.org) is a multi-winner of [Kaggle competitions](https://www.kaggle.com/alexandrebarachant) and currently specializes in decoding MEG and EEG signals using Riemannian Geometry.
 
-- [Denis Engemann](http://www.denis-engemann.de), is an researcher at INRIA and currently specializes in large-scale analyses of EEG and MEG databases.
+- [Denis Engemann](http://www.denis-engemann.de), is a researcher at INRIA and currently specializes in large-scale analyses of EEG and MEG databases.
 
-- [Alexandre Gramfort](http://alexandre.gramfort.net) is a Assistant Professor at Telecom ParisTech Université Paris-Saclay, [Scikit-Learn](http://scikit-learn.org) core developper and working on statistical machine learning and neuroscience data processing.
+- [Alexandre Gramfort](http://alexandre.gramfort.net) is a Assistant Professor at Telecom ParisTech Université Paris-Saclay, [Scikit-Learn](http://scikit-learn.org) core developer and working on statistical machine learning and neuroscience data processing.
 
 - [Chris Holdgraf](http://predictablynoisy.com/) is a grad student at University of California Berkeley and currently specializes in continuous encoding models.
 
