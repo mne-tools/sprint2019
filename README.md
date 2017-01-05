@@ -11,7 +11,7 @@ Room: To-be-announced.
 
 ## What & Why
 
-By providing new techniques and new ways of looking at complex datasets, Machine Learning (ML) is revolutionizing many scientific fields.
+By providing new techniques and new ways of looking at complex datasets, Machine Learning (ML) is revolutionizing science.
 
 The present coding sprint aims at gathering expert data-scientists, who specialize in high dimensional time series.
 
@@ -101,7 +101,7 @@ The following core-contributors of the [MNE Software](mne-tools.github.io) have 
 
 - [ ] DOC: tutorials on statistical inference [moderate]
 
-- [ ] ENH: improve performance and memory behaviour [hard]
+- [ ] ENH: improve performance and memory behaviour [moderate]
 
 
 ## Support or Contact
