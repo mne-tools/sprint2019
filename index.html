@@ -1,0 +1,158 @@
+---
+title: Home
+description: Coding Sprint - Supervised Time Series
+image: images/background.png
+bottom_image: images/all-logo.png
+map:
+  latitude: 40.7290387
+  longitude: -73.996374
+  address: "6 Washington place, New-York"
+  zoom: 13
+---
+
+<section class="hero" style="background-image: url({% include relative-src.html src=page.image %})">
+	<div class="inner-hero text-container">
+		<div class="hero-text-container">
+			<h1 class="editable">Coding Sprint:</h1>
+			<h1 class="editable">Supervised Time Series</h1>
+			<p class="subtext editable">March 27th - 31st 2017, New York University</p>
+		</div>
+	</div>
+	<div class="learn-more"><a href="#learn-more">Learn more <span class="arrow">&#x25BC;</span></a></div>
+</section>
+
+<div class="content">
+	<section class="info" id="learn-more">
+		<div class="container flex">
+			<div class="text">
+				<h2 class="editable">What &amp Why</h2>
+				<p class="editable">
+					By providing new techniques and new ways of looking at complex datasets, Machine Learning (ML) is revolutionizing science.
+
+
+					The present coding sprint aims at gathering expert data-scientists, who specialize in high dimensional time series.
+				</p>
+			</div>
+			<div class="image">
+				<img class="editable" src="http://placehold.it/650x1300" alt="Screenshot" />
+			</div>
+		</div>
+	</section>
+
+	<section class="info">
+		<div class="container flex">
+			<div class="text">
+				<h2 class="editable">How</h2>
+				<p class="editable">
+					Our specific goal is to seamlessly integrate i) classical signal processing and ii) the popular machine learning techniques by providing a Python API that follows Scikit-Learn's, the most widely adopted and successful general machine learning package available in Python.
+
+
+					At the end of the coding sprint, users should be able to build effective pipelines that allow to transform, fit, predict and score their data
+				</p>
+			</div>
+{% highlight python %}
+estimator = make_pipeline(
+    TimeFrequencyTransform(frequencies=range(1, 100)),
+    GrangerCausality(),
+    SearchLight(SVM(kernel='rbf'), axis='time'),
+)
+
+# or
+
+estimator = make_pipeline(
+    CSP(n_components=10),
+    InverseOperator(info),
+    SearchLight(Ridge(), axis='space'),
+)
+
+# such that we can do
+
+estimator.transform(X, y)  # transform time series.
+estimator.fit(X, y)  # transform & fit time series with machine learning algorithm.
+estimator.predict(X, y)  # predict the class of each time series.
+estimator.apply(X)  # transform time series to only keep relevant features.
+
+{% endhighlight %}
+		</div>
+	</section>
+
+
+	<section class="pad" id='who'>
+		<div class="container">
+			<h2 class="editable">Who</h2>
+			<ul class="staff">
+				{% for person in site.staff_members %}
+					<li>
+						<div class="square-image" style="background-image: url({% include relative-src.html src=person.image_path %})"></div>
+						<div class="name"><a target="_blank" href="{{ person.website }}">{{ person.name }}</a></div>
+						<div class="position">{{ person.blurb }}</div>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+
+	<section class="info" id="where">
+		<div class="container">
+			<div class="text">
+				<h2 class="editable">Where</h2>
+				<p class="editable">6 Washington place, New-York.</p>
+			</div>
+		</div>
+		<div class="container flex">
+
+			<div class="map" id="map"></div>
+
+			<script>
+				window.mapData = {{ page.map | jsonify }};
+
+				function initMap() {
+					var myOptions = {
+						scrollwheel: false,
+						draggable: false,
+						panControl: false,
+						disableDefaultUI: true,
+						styles: [{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"color":"#f7f1df"}]},{"featureType":"landscape.natural","elementType":"geometry","stylers":[{"color":"#d0e3b4"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"geometry","stylers":[{"color":"#fbd3da"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#bde6ab"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffe15f"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#efd151"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"black"}]},{"featureType":"transit.station.airport","elementType":"geometry.fill","stylers":[{"color":"#cfb2db"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#a2daf2"}]}],
+						zoom: window.mapData.zoom,
+						maxZoom: window.mapData.zoom,
+						minZoom: window.mapData.zoom,
+						center: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude),
+						mapTypeId: google.maps.MapTypeId.ROADMAP
+					};
+
+					var map = new google.maps.Map(document.getElementById('map'), myOptions);
+
+					var marker = new google.maps.Marker({
+						map: map,
+						position: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude)
+					});
+
+					google.maps.event.addDomListener(window, 'resize', function() {
+						map.setCenter(myOptions.center);
+					});
+				}
+			</script>
+			<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_javascript_api_key }}&amp;callback=initMap"></script>
+		</div>
+	</section>
+
+	<section class="info">
+		<div class="container">
+			<div class="text">
+				<h2 class="editable">Supported by</h2>
+			</div>
+			<div class="image">
+				<img class="editable" src=images/support-logo.png alt="Suported by" />
+			</div>
+
+			<div class="text">
+				<h2 class="editable">To contribute to</h2>
+			</div>
+			<div class="image">
+				<img class="editable" src=images/contribute-logo.png alt="Suported by" />
+			</div>
+
+		</div>
+	</section>
+
+</div>
