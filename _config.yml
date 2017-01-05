@@ -5,7 +5,7 @@ title: Frisco Template
 url: "https://brave-submarine.cloudvent.net"
 baseurl:
 google_analytics_key:
-google_maps_javascript_api_key:
+google_maps_javascript_api_key: AIzaSyB1INhm89YSR9BPKhfq4DBCQ7wXlZ55BgA
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
