@@ -53,7 +53,7 @@ The following core-contributors of the [MNE Software](mne-tools.github.io) have 
 
 - [Denis Engemann](http://www.denis-engemann.de), is a researcher at [INRIA](https://www.inria.fr/en/) has specialized in automated and large-scale analyses of EEG and MEG data.
 
-- [Alexandre Gramfort](http://alexandre.gramfort.net) is a Assistant Professor at Telecom ParisTech Université Paris-Saclay, [Scikit-Learn](http://scikit-learn.org) core developer and working on statistical machine learning and neuroscience data processing.
+- [Alexandre Gramfort](http://alexandre.gramfort.net) is an Assistant Professor at Telecom ParisTech Université Paris-Saclay, [Scikit-Learn](http://scikit-learn.org) core developer and working on statistical machine learning and neuroscience data processing.
 
 - [Chris Holdgraf](http://predictablynoisy.com/) is a grad student at University of California Berkeley has specialized in continuous encoding models.
 
