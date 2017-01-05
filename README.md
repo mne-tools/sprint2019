@@ -51,7 +51,7 @@ The following core-contributors of the [MNE Software](mne-tools.github.io) have 
 
 - [Alexandre Barachant](http://alexandre.barachant.org) is a multi-winner of [Kaggle competitions](https://www.kaggle.com/alexandrebarachant) has specialized in decoding MEG and EEG signals using Riemannian Geometry.
 
-- [Denis Engemann](http://www.denis-engemann.de), is a researcher at INRIA has specialized in automated and large-scale analyses of EEG and MEG data.
+- [Denis Engemann](http://www.denis-engemann.de), is a researcher at [INRIA](https://www.inria.fr/en/) has specialized in automated and large-scale analyses of EEG and MEG data.
 
 - [Alexandre Gramfort](http://alexandre.gramfort.net) is a Assistant Professor at Telecom ParisTech Université Paris-Saclay, [Scikit-Learn](http://scikit-learn.org) core developer and working on statistical machine learning and neuroscience data processing.
 
