@@ -9,7 +9,7 @@ Room: To-be-announced.
 [![alt text](map.png "NYU Map")](https://www.google.fr/maps/place/New+York+University/@40.7295134,-73.9986549,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2599af55395c1:0xda30743171b5f305!8m2!3d40.7295134!4d-73.9964609?hl=en)
 
 
-## What & Why
+## What?
 
 By providing new techniques and new ways of looking at complex datasets, Machine Learning (ML) is revolutionizing science.
 

@@ -1,6 +1,8 @@
-- name: What & Why
+- name: What ?
   link: "#learn-more"
-- name: Who
+- name: Who ?
   link: "#who"
-- name: Where
+- name: Where ?
   link: "#where"
+- name: Contact
+  link: "#contact"

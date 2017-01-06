@@ -1,23 +1,23 @@
 # ----
 # Site
 
-title: Frisco Template
-url: "https://brave-submarine.cloudvent.net"
+title: Supervised Neural Time Series
+url: "https://kingjr.github.io/supervised_time_series/"
 baseurl:
 google_analytics_key:
 google_maps_javascript_api_key:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
-description: App marketing template for Jekyll.
+description: Coding Sprint.
 author:
   name:
   email:
-  twitter: # twitter username without the @ symbol
+  twitter:
 social:
-  name: Frisco Template
+  name: Supervised Neural Time Series
   links:
-    - https://github.com/CloudCannon/frisco-jekyll-template
+    - https://kingjr.github.io/supervised_time_series/
 
 # -----
 # Build
@@ -81,5 +81,5 @@ social_icons:
   - RSS
 
 _comments:
-  description: Text shown when sharing on social media
-  blurb: Short bio or description of this person
+  description: Coding sprint: supervised neural time series
+  blurb: Coding sprint: supervised neural time series

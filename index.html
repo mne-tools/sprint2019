@@ -6,80 +6,91 @@ bottom_image: images/all-logo.png
 map:
   latitude: 40.7290387
   longitude: -73.996374
-  address: "6 Washington place, New-York"
+  address: "6 Washington Place, New York University, New York"
   zoom: 13
 ---
 
 <section class="hero" style="background-image: url({% include relative-src.html src=page.image %})">
 	<div class="inner-hero text-container">
 		<div class="hero-text-container">
-			<h1 class="editable">Coding Sprint:</h1>
-			<h1 class="editable">Supervised Time Series</h1>
-			<p class="subtext editable">March 27th - 31st 2017, New York University</p>
+			<h1 class="editable">Supervised Neural Time Series</h1>
+			<p class="subtext editable">March 27th - 31st 2017, New York</p>
 		</div>
 	</div>
-	<div class="learn-more"><a href="#learn-more">Learn more <span class="arrow">&#x25BC;</span></a></div>
+	<div class="learn-more"><a href="#learn-more">Learn more<span class="arrow">&#x25BC;</span></a></div>
 </section>
 
 <div class="content">
 	<section class="info" id="learn-more">
 		<div class="container flex">
 			<div class="text">
-				<h2 class="editable">What &amp Why</h2>
+				<h2 class="editable">What?</h2>
 				<p class="editable">
-					By providing new techniques and new ways of looking at complex datasets, Machine Learning (ML) is revolutionizing science.
-
-
-					The present coding sprint aims at gathering expert data-scientists, who specialize in high dimensional time series.
+          We are witnessing a rare event in science: a paradigm shift. In case you haven't noticed, machine learning and scalable computing have, in less than a decade, demonstrated how simple information can be extracted from complex datasets.
+        </p>
+        <p class="editable">
+					In this coding sprint, we aim at gathering established data-scientists, who specialize in <b>high dimensional time series of neuronal recordings</b>, to work on a common issue: integrating, within a coherent Python ecosystem, classical signal processing and popular machine learning techniques.
+        </p>
+        <p class="editable">
+          We focus on increasing the <b>inter-operability of open-source packages</b> developed for distinct types of neuronal recordings (e.g. animal electrophysiology, electro-corticography and magneto-encephalography) with a simple constrain: functions must follow the <a href="scikit-learn.org">scikit-learn</a>'s API.
 				</p>
-			</div>
-			<div class="image">
-				<img class="editable" src="http://placehold.it/650x1300" alt="Screenshot" />
-			</div>
-		</div>
-	</section>
+        <p class="editable">
+        The eco-system would allow users to quickly build effective pipelines to fit, make predictions from and score complex models on raw or transformed time series, within <b>a principled workflow</b>:
+        </p>
+      <p class="editable">
+      {% highlight python %}
+      # Example of a simple decoding pipeline using spike recordings.
+      estimator = make_pipeline(
+          UnsupervisedSpatialFilter(PCA(nc_components=5)),
+          SpikeDetection(threshold='auto'),
+          SearchLight(GLM(link_function='poisson'), axis='time'),
+      )
+      {% endhighlight %}
+      </p>
+      <p class="editable">
+      {% highlight python %}
+      # Example of a simple decoding pipeline using classic brain-computer interface algorithm.
+      estimator = make_pipeline(
+          CSP(n_components=10),
+          InverseOperator(info),
+          SearchLight(Ridge(), axis='space'),
+      )
+      {% endhighlight %}
+      </p>
+      <p class="editable">
+      {% highlight python %}
+      # Example of an advanced decoding pipeline using MEG and Riemannian geometry.
+      estimator = make_pipeline(
+          TimeFrequencyTransform(frequencies=np.arange(1., 100.), sfreq=1000.),
+          SearchLight(
+            make_pipeline(
+              Covariances(regularization='oas'),
+              TangentSpace(),
+              SVM(kernel='rbf')),
+            axis='time'),
+      )
+      {% endhighlight %}
 
-	<section class="info">
-		<div class="container flex">
-			<div class="text">
-				<h2 class="editable">How</h2>
-				<p class="editable">
-					Our specific goal is to seamlessly integrate i) classical signal processing and ii) the popular machine learning techniques by providing a Python API that follows Scikit-Learn's, the most widely adopted and successful general machine learning package available in Python.
+      </p>
+      <p class="editable">
+      {% highlight python %}
 
+      estimator.transform(X, Y)  # transform neural time series.
+      estimator.fit(X, Y)  # transform & fit neural time series with machine learning algorithm.
+      estimator.predict(X)  # predict features of an unknown time series.
+      estimator.score(X)  # estimate quality of a model fit.
 
-					At the end of the coding sprint, users should be able to build effective pipelines that allow to transform, fit, predict and score their data
-				</p>
-			</div>
-{% highlight python %}
-estimator = make_pipeline(
-    TimeFrequencyTransform(frequencies=range(1, 100)),
-    GrangerCausality(),
-    SearchLight(SVM(kernel='rbf'), axis='time'),
-)
+      {% endhighlight %}
+      </p>
+    </div>
+  </div>
 
-# or
-
-estimator = make_pipeline(
-    CSP(n_components=10),
-    InverseOperator(info),
-    SearchLight(Ridge(), axis='space'),
-)
-
-# such that we can do
-
-estimator.transform(X, y)  # transform time series.
-estimator.fit(X, y)  # transform & fit time series with machine learning algorithm.
-estimator.predict(X, y)  # predict the class of each time series.
-estimator.apply(X)  # transform time series to only keep relevant features.
-
-{% endhighlight %}
-		</div>
 	</section>
 
 
 	<section class="pad" id='who'>
 		<div class="container">
-			<h2 class="editable">Who</h2>
+			<h2 class="editable">Who ?</h2>
 			<ul class="staff">
 				{% for person in site.staff_members %}
 					<li>
@@ -89,6 +100,9 @@ estimator.apply(X)  # transform time series to only keep relevant features.
 					</li>
 				{% endfor %}
 			</ul>
+
+      The current developers focus on <i>neural</i> time series. However, we are particularly interested in productive exchange with other scientific fields that encounter similarly structured signals (musicology, speech processing, climate science, seismology, kinect and radar analyses, etc).
+
 		</div>
 	</section>
 
@@ -96,7 +110,7 @@ estimator.apply(X)  # transform time series to only keep relevant features.
 		<div class="container">
 			<div class="text">
 				<h2 class="editable">Where</h2>
-				<p class="editable">6 Washington place, New-York.</p>
+				<p class="editable"><a href=https://www.google.com/maps/place/6+Washington+Pl,+New+York,+NY+10003/@40.7290387,-73.996374,17z/data=!4m13!1m7!3m6!1s0x89c2599a85a86b71:0x47930e6f7b80b13!2s6+Washington+Pl,+New+York,+NY+10003!3b1!8m2!3d40.7290387!4d-73.9941853!3m4!1s0x89c2599a85a86b71:0x47930e6f7b80b13!8m2!3d40.7290387!4d-73.9941853>6 Washington place, New York University, New York.</a></p>
 			</div>
 		</div>
 		<div class="container flex">
@@ -136,7 +150,16 @@ estimator.apply(X)  # transform time series to only keep relevant features.
 		</div>
 	</section>
 
-	<section class="info">
+	<section class="contact", id="contact">
+		<div class="container">
+      <div class="text">
+				<h2 class="editable">Contact</h2>
+        jeanremi.king [at] gmail.com
+			</div>
+    </div>
+  </section>
+
+  <section class="logos", id="logo">
 		<div class="container">
 			<div class="text">
 				<h2 class="editable">Supported by</h2>
