@@ -39,51 +39,54 @@ map:
         <p class="editable">
         The eco-system would allow users to quickly build effective pipelines to fit, make predictions from and score complex models on raw or transformed time series, within <b>a principled workflow</b>:
         </p>
-      <p class="editable">
-      {% highlight python %}
-      # Example of a simple decoding pipeline using spike recordings.
-      estimator = make_pipeline(
-          UnsupervisedSpatialFilter(PCA(nc_components=5)),
-          SpikeDetection(threshold='auto'),
-          SearchLight(GLM(link_function='poisson'), axis='time'),
-      )
-      {% endhighlight %}
-      </p>
-      <p class="editable">
-      {% highlight python %}
-      # Example of a simple decoding pipeline using classic brain-computer interface algorithm.
-      estimator = make_pipeline(
-          CSP(n_components=10),
-          InverseOperator(info),
-          SearchLight(Ridge(), axis='space'),
-      )
-      {% endhighlight %}
-      </p>
-      <p class="editable">
-      {% highlight python %}
-      # Example of an advanced decoding pipeline using MEG and Riemannian geometry.
-      estimator = make_pipeline(
-          TimeFrequencyTransform(frequencies=np.arange(1., 100.), sfreq=1000.),
-          SearchLight(
-            make_pipeline(
-              Covariances(regularization='oas'),
-              TangentSpace(),
-              SVM(kernel='rbf')),
-            axis='time'),
-      )
-      {% endhighlight %}
+        <p class="editable">
+        {% highlight python %}
+        # Example of a simple decoding pipeline using spike recordings.
+        estimator = make_pipeline(
+            UnsupervisedSpatialFilter(PCA(nc_components=5)),
+            SpikeDetection(threshold='auto'),
+            SearchLight(GLM(link_function='poisson'), axis='time'),
+        )
+        {% endhighlight %}
+        </p>
+        <p class="editable">
+        {% highlight python %}
+        # Example of a simple decoding pipeline using classic brain-computer interface algorithm.
+        estimator = make_pipeline(
+            CSP(n_components=10),
+            InverseOperator(info),
+            SearchLight(Ridge(), axis='space'),
+        )
+        {% endhighlight %}
+        </p>
+        <p class="editable">
+        {% highlight python %}
+        # Example of an advanced decoding pipeline using MEG and Riemannian geometry.
+        estimator = make_pipeline(
+            TimeFrequencyTransform(frequencies=np.arange(1., 100.), sfreq=1000.),
+            SearchLight(
+              make_pipeline(
+                Covariances(regularization='oas'),
+                TangentSpace(),
+                SVM(kernel='rbf')),
+              axis='time'),
+        )
+        {% endhighlight %}
 
-      </p>
-      <p class="editable">
-      {% highlight python %}
+        </p>
+        <p class="editable">
+        {% highlight python %}
 
-      estimator.transform(X, Y)  # transform neural time series.
-      estimator.fit(X, Y)  # transform & fit neural time series with machine learning algorithm.
-      estimator.predict(X)  # predict features of an unknown time series.
-      estimator.score(X)  # estimate quality of a model fit.
+        estimator.transform(X, Y)  # transform neural time series.
+        estimator.fit(X, Y)  # transform & fit neural time series with machine learning algorithm.
+        estimator.predict(X)  # predict features of an unknown time series.
+        estimator.score(X)  # estimate quality of a model fit.
 
-      {% endhighlight %}
-      </p>
+        {% endhighlight %}
+        </p>
+        <p class="editable">
+          This work directly i) tightens the neuroscience and machine learning communities ii) increases the modularity and robustness of Python eco-system, and therefore iii) facilitate scientists' daily work by producing robust and useable cutting-edge tools.
+        </p>
     </div>
   </div>
 
