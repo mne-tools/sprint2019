@@ -30,70 +30,37 @@ map:
 	<section class="info" id="learn-more">
 		<div class="container flex">
 			<div class="text">
-				<h2 class="editable">What?</h2>
+				<h2 class="editable">Why?</h2>
 				<p class="editable">
-          Holy sh*t! We're in a paradigm shift.
-        </p>
-        <p class="editable">
-          In case you haven't noticed, machine learning and scalable computing have - in less than a decade - demonstrated how a rich set of information can be extracted from complex datasets, with consequences in most scientific and industrial fields.
-        </p>
-        <p class="editable">
-					Here, we are organizing a coding sprint to gather established data-scientists, who specialize in <b>high dimensional time series</b>, to work on a common issue: integrating, within a coherent Python ecosystem, classical signal processing and popular machine learning techniques.
-        </p>
-        <p class="editable">
-          We focus on increasing the <b>inter-operability of open-source packages</b> developed for particularly complex yet manipulable data: neuronal recordings (e.g. animal electrophysiology, electro-corticography and magneto-/electro-encephalography (M/EEG)). And we impose a simple constraint: functions and packages must follow the <a href="http://scikit-learn.org/stable/">scikit-learn</a>'s API.
+			          Holy sh*t! We're in a paradigm shift.
+        			</p>
+			        <p class="editable">
+				  In less than a decade, machine learning and scalable computing have demonstrated how knowledge can be extracted from complex datasets. The primary workhorse of this success has been free open source software (FOSS). With its strong emphasis on API design, the FOSS culture has made it less effortful to plan, develop in teams, re-use, distribute, teach, optimize & scale data analysis efforts. Coding sprints are a way to focus development efforts and share best practices that generalize across a range of application domains.
+			        </p>
+				<h2 class="editable">What?</h2>
+			        <p class="editable">
+				  Supervised Neural Time Series is a week-long coding sprint to gather established data scientists, who specialize in high-dimensional neural time series. Together, we will work on advancing popular or upcoming FOSS projects that enable the analysis of a broad class of neural recordings: extracellular neurophysiology (spike trains), electro-corticography and magneto-/electro-encephalography (M/EEG).
 				</p>
-        <p class="editable">
-          This framework will allow users to quickly build effective pipelines to fit, make predictions from and score complex models on raw or transformed time series, within <b>a principled workflow</b>:
-        </p>
-        <p class="editable">
-        {% highlight python %}
-        # Example of a simple decoding pipeline using spike recordings.
-        estimator = make_pipeline(
-            UnsupervisedSpatialFilter(PCA(nc_components=5)),
-            SpikeDetection(threshold='auto'),
-            SearchLight(GLM(link_function='poisson'), axis='time'),
-        )
-        {% endhighlight %}
-        </p>
-        <p class="editable">
-        {% highlight python %}
-        # Example of a simple decoding pipeline using classic brain-computer interface algorithm.
-        estimator = make_pipeline(
-            CSP(n_components=10),
-            InverseOperator(info),
-            SearchLight(Ridge(), axis='space'),
-        )
-        {% endhighlight %}
-        </p>
-        <p class="editable">
-        {% highlight python %}
-        # Example of an advanced decoding pipeline using MEG and Riemannian geometry.
-        estimator = make_pipeline(
-            TimeFrequencyTransform(frequencies=np.arange(1., 100.), sfreq=1000.),
-            SearchLight(
-              make_pipeline(
-                Covariances(regularization='oas'),
-                TangentSpace(),
-                SVM(kernel='rbf')),
-              axis='time'),
-        )
-        {% endhighlight %}
 
-        </p>
-        <p class="editable">
-        {% highlight python %}
+				<ul>
+				    <li> <a href="https://github.com/mne-tools/mne-python">MNE Python</a> is a single suite of tools for pre-processing, source-modeling, decoding and visualization of M/EEG data.
+				    </li>
+				    <li> <a href="https://github.com/glm-tools/pyglmnet">Pyglmnet</a> enables generalized linear modeling with advanced regularization.
+				    </li>
+				    <li> <a href="https://github.com/kordinglab/spykes">Spykes</a> offers 101 analysis tools for spike trains and visualization, including rasters, PSTHs, tuning curves, RF estimation and population decoding.
+				    </li>
+				    <li> <a href="https://github.com/alexandrebarachant/pyRiemann">Pyreimann</a> offers tools to characterize the covariance structure of high-dimensional signals with Reimannian geometry.
+				    </li>
+				</ul>
+				
+				<p class="editable">
+				  We will soon post a wishlist of pull requests for these projects. Stay tuned!
+				</p>
+				
+				<p class="editable">
+				  We are looking for established data science developers to both contribute and bring their own projects. Although the organizers specialize in neural time series, we are looking to productively engage with data scientists from fields with similarly structure data (finance, musicology, speech processing, climate science, seismology, kinect and radar analyses, etc.). In keeping with this push for diversity, we particularly welcome women and underrepresented minorities.
+				</p>
 
-        estimator.transform(X, Y)  # transform neural time series.
-        estimator.fit(X, Y)  # transform & fit neural time series with machine learning algorithm.
-        estimator.predict(X)  # predict features of an unknown time series.
-        estimator.score(X)  # estimate quality of a model fit.
-
-        {% endhighlight %}
-        </p>
-        <p class="editable">
-          This effort will directly i) tighten the neuroscience and machine learning communities ii) increase the modularity and robustness of Python eco-system, and therefore iii) facilitate scientists' daily work by producing robust and useable cutting-edge tools.
-        </p>
     </div>
   </div>
 
@@ -102,7 +69,7 @@ map:
 
 	<section class="pad" id='who'>
 		<div class="container">
-			<h2 class="editable">Who ?</h2>
+			<h2 class="editable">Who?</h2>
 			<ul class="staff">
 				{% for person in site.staff_members %}
 					<li>
