@@ -1,7 +1,7 @@
 ---
 name: Jean-Rémi King
-position: Developer
+position: Research scientist
 image_path: /images/jeanremi.png
 website: https://sites.google.com/site/jeanremiking/
-blurb: Postdoctoral Fellow at NYU and has specialized in supervised machine learning applied to neural time series.
+blurb: CNRS, FAIR
 ---
