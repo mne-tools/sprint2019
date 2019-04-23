@@ -3,5 +3,5 @@ name: Denis Engemann
 position: Developer
 image_path: /images/denis.jpeg
 website: http://www.denis-engemann.de/
-blurb: Researcher at INRIA and has specialized in automated and large-scale analyses of EEG and MEG data.
+blurb: Research scientist at INRIA, core developer of MNE, specialized in large-scale analyses of electrophysiological data (EEG/MEG), statistical learning and biomarker development in clinical neuroscience.
 ---
