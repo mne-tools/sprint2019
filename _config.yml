@@ -1,8 +1,8 @@
 # ----
 # Site
 
-title: Supervised Neural Time Series
-url: "https://kingjr.github.io/supervised_time_series/"
+title: MNE Code Sprint 2019
+url: "https://mne-tools.github.io/sprint2019/"
 baseurl:
 google_analytics_key:
 google_maps_javascript_api_key: AIzaSyB1INhm89YSR9BPKhfq4DBCQ7wXlZ55BgA
@@ -15,9 +15,9 @@ author:
   email:
   twitter:
 social:
-  name: Supervised Neural Time Series
+  name: MNE Code Sprint
   links:
-    - https://kingjr.github.io/supervised_time_series/
+    - https://mne-tools.github.io/sprint2019/
 
 # -----
 # Build
@@ -81,5 +81,5 @@ social_icons:
   - RSS
 
 _comments:
-  description: Coding sprint supervised neural time series
-  blurb: Coding sprint supervised neural time series
+  description: MNE Code Sprint 2019
+  blurb: MNE Code Sprint 2019
