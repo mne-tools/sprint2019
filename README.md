@@ -1,3 +1,3 @@
-# Supervised Neural Time Series 2017 Coding Sprint
+# MNE Code Sprint 2019
 
-March 27th - 31st, at 60 5th Avenue, Center for Data Science (CDS) New York University (NYU), New York.
+April 22nd - 27st, at Facebook Office, 6 rue Ménars, Paris
