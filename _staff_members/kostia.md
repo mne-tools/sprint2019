@@ -1,7 +1,7 @@
 ---
 name: Kostia Maksymenko
 position: PhD
-website: http://staff.washington.edu/larsoner/
+website: https://github.com/makkostya
 image_path: /images/kostia.png
 blurb:  INIRA
 ---
